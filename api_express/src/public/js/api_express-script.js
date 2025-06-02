@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
         burger.addEventListener('click', () => {
             navUl.classList.toggle('open');
             burger.src = navUl.classList.contains('open')
-                ? '/assets/img/close.png'
-                : '/assets/img/burger.png';
+                ? './assets/img/close.png'
+                : './assets/img/burger.png';
         });
         window.addEventListener('resize', () => {
             if (window.innerWidth > 600) {
                 navUl.classList.remove('open');
-                burger.src = '/assets/img/burger.png';
+                burger.src = './assets/img/burger.png';
             }
         });
     } else {
@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
         subBurger.addEventListener('click', () => {
             subNavUl.classList.toggle('open');
             subBurger.src = subNavUl.classList.contains('open')
-                ? '/assets/img/close.png'
-                : '/assets/img/burger.png';
+                ? './assets/img/close.png'
+                : './assets/img/burger.png';
         });
         window.addEventListener('resize', () => {
             if (window.innerWidth > 700) {
                 subNavUl.classList.remove('open');
-                subBurger.src = '/assets/img/burger.png';
+                subBurger.src = './assets/img/burger.png';
             }
         });
     } else {
