@@ -1,0 +1,354 @@
+/* ===========================
+   TYPOGRAPHIE ET TITRES
+   =========================== */
+h1, h2, h3 {
+    text-align: center;
+    color: #222;
+    margin-top: 0.5em;
+}
+h1 {
+    color: #3c873a; /* Vert Node.js */
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+h2 {
+    background-color: #3c873a;
+    color: #222;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+h3 {
+    color: #3c873a;
+    font-size: 1.3em;
+}
+
+/* ===========================
+   BASE ET LAYOUT
+   =========================== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #23272f;
+    margin: 0;
+    padding: 0;
+    color: #3c873a;
+    text-align: center;
+    font-size: 1.1em;
+}
+a {
+    color: #3c873a;
+    text-decoration: underline;
+    outline: none;
+}
+a:focus {
+    outline: 3px solid #3c873a;
+    background: #fffbe6;
+    color: #222;
+    text-decoration: underline;
+}
+
+/* ===========================
+   NAVIGATION PRINCIPALE (main-nav)
+   =========================== */
+nav {
+    background: #222;
+    padding: 1em 0;
+}
+nav.main-nav .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+    position: relative;
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    background: none !important;
+    padding: 0.2em 0.8em;
+}
+.logo-img {
+    height: 55px;
+    width: auto;
+    vertical-align: middle;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: none;
+}
+.logo-link:hover .logo-img,
+.logo-link:focus .logo-img {
+    transform: scale(1.12);
+    box-shadow: 0 0 12px 2px #3c873a, 0 2px 8px #0002;
+}
+.logo-link.active .logo-img {
+    box-shadow: 0 0 12px 2px #3c873a, 0 2px 8px #0002;
+}
+.menu-burger {
+    display: none;
+    position: absolute;
+    right: 0.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+.menu-burger img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+nav.main-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+nav.main-nav ul li a {
+    color: #3c873a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3em 1em;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+nav.main-nav ul li a:hover,
+nav.main-nav ul li a.active,
+nav.main-nav ul li a:focus {
+    background: #3c873a;
+    color: #222;
+    transform: scale(1.08);
+    box-shadow: 0 0 12px 2px #3c873a, 0 2px 8px #0002;
+    text-decoration: underline;
+    outline: none;
+}
+
+/* ===========================
+   CONTENANTS PRINCIPAUX
+   =========================== */
+.container, .projects, .exercice, section {
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 2em;
+    background: #23272f;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    text-align: center;
+}
+
+/* ===========================
+   LISTE DES PROJETS
+   =========================== */
+.projects-list, .projects-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 2em auto;
+    max-width: 1000px;
+}
+.projects-list li {
+    background: #2d333b;
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0003;
+    padding: 1.5em 1.2em;
+    text-align: left;
+    transition: box-shadow 0.2s, border-left 0.2s;
+    border-left: 6px solid #3c873a;
+    color: #f5f7fa;
+}
+.projects-list li:hover,
+.projects-list li:focus-within {
+    box-shadow: 0 4px 16px #3c873a, 0 2px 8px #0002;
+    border-left: 8px solid #3c873a;
+}
+.projects-list h3 {
+    margin-top: 0;
+    color: #3c873a;
+    font-size: 1.3em;
+}
+.projects-list a {
+    color: #3c873a;
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 0.3em 1em;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.projects-list a:hover,
+.projects-list a:focus {
+    background: #3c873a;
+    color: #222;
+    transform: scale(1.08);
+    box-shadow: 0 0 12px 2px #3c873a, 0 2px 8px #0002;
+    text-decoration: underline;
+    outline: none;
+}
+
+/* ===========================
+   BOUTONS
+   =========================== */
+.btn {
+    background: #3c873a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7em 1.5em;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 1em 0;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.btn:hover, .btn:focus, .btn.active {
+    background: #3c873a;
+    color: #222;
+    transform: scale(1.08);
+    box-shadow: 0 0 12px 2px #3c873a, 0 2px 8px #0002;
+    text-decoration: none;
+    outline: none;
+}
+
+/* ===========================
+   INPUTS ET TEXTAREA
+   =========================== */
+input[type="text"], textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #3c873a;
+    padding: 10px;
+    font-size: 1.1em;
+    margin: 1em 0;
+    box-sizing: border-box;
+    background: #f5f7fa;
+    color: #222;
+}
+
+/* ===========================
+   MODALE PERSONNALISÉE JQUERY
+   =========================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+.modal.show {
+    display: flex;
+}
+.modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2em;
+    max-width: 600px;
+    width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 2px 16px #0004;
+    position: relative;
+    text-align: left;
+}
+.close-modal {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 2.5em;
+    color: #3c873a;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: none;
+}
+.close-modal:hover, .close-modal:focus {
+    transform: scale(1.08);
+    box-shadow: 0 0 12px 2px #3c873a, 0 2px 8px #0002;
+    outline: none;
+}
+#modal-jquery h1 {
+    background: #222;
+    color: #3c873a;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    margin-top: 0;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+/* ===========================
+   RESPONSIVE : NAVBAR & MENU BURGER
+   =========================== */
+@media (max-width: 600px) {
+    nav.main-nav .nav-content {
+        flex-direction: row;
+        padding: 0 0.5em;
+    }
+    .menu-burger {
+        display: block;
+    }
+    nav.main-nav ul {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        z-index: 150;
+        box-shadow: 0 2px 8px #0004;
+        border-radius: 0 0 12px 12px;
+        margin: 0;
+        padding: 0.5em 0;
+    }
+    nav.main-nav ul.open {
+        display: flex;
+    }
+    nav.main-nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+    nav.main-nav ul li:last-child {
+        border-bottom: none;
+    }
+    .logo-link {
+        padding: 0.2em 0.2em;
+    }
+    nav.main-nav ul li a {
+        color: #fff !important;
+        background: none !important;
+        padding: 1em 0;
+        display: block;
+        font-weight: bold;
+        border-radius: 0;
+    }
+    nav.main-nav ul li a.active {
+        background: #3c873a !important;
+        color: #222 !important;
+        text-decoration: underline !important;
+    }
+}
+
+/* ===========================
+   ACCESSIBILITÉ
+   =========================== */
+:focus-visible {
+    outline: 3px solid #3c873a;
+    outline-offset: 2px;
+}
+@media (prefers-contrast: more) {
+    body, .projects-list li, .container, .projects, .exercice, section {
+        background: #111 !important;
+        color: #fff !important;
+    }
+    nav, nav.main-nav ul, .modal-content {
+        background: #000 !important;
+    }
+}

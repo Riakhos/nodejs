@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestion des messages - API Express">
+    <meta name="author" content="Richard Bonnegent">
+    <meta name="keywords" content="Node.js, Express, API, MongoDB, Messages">
+    <link rel="icon" href="/assets/img/nodejs-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style-api_express.css">
+    <title>API Express - Messages</title>
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="../../../index.html" class="logo-link">
+                <img src="/assets/img/nodejs-logo.svg" alt="Node.js Logo" class="logo-img">
+            </a>
+            <div class="menu-burger">
+                <img src="/assets/img/burger.png" alt="Menu" id="burger-menu">
+            </div>
+            <ul>
+                <li><a href="index.html" class="active">API Express</a></li>
+                <li><a href="../../../front_react/public/index.html">Front React</a></li>
+                <li><a href="../../../la_foire_rest_api/">La Foire REST API</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="sub-nav">
+        <div class="sub-menu-burger">
+            <img src="/assets/img/burger.png" alt="Menu" id="sub-burger-menu">
+        </div>
+        <ul>
+            <li><a href="index.html">Accueil API</a></li>
+            <li><a href="users.html">Liste utilisateurs</a></li>
+            <li><a href="messages.html" class="active">Messages</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="projects-list">
+            
+            <div class="header-actions">
+                <h1>Liste des messages</h1>
+                <div class="actions-messages" id="actions-messages">
+                    <button class="btn open-modal" data-modal="add-message">Nouveau message</button>
+                </div>
+            </div>
+            
+            <div class="search-user-messages">
+                <form id="search-user-messages-form">
+                    <input type="text" id="search-user-id" placeholder="Entrer un idUser pour voir ses messages" required>
+                    <button type="submit" class="btn">Voir messages utilisateur</button>
+                </form>
+                <div id="user-messages-result"></div>
+            </div>
+            
+            <p>
+                Cette page affiche la liste des messages enregistrés dans l'API Express.<br>
+                Vous pouvez ajouter, rechercher, modifier ou supprimer un message.
+            </p>
+
+            <!-- Modale réutilisable -->
+            <div id="modal-nodejs" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div id="modal-body"></div>
+                </div>
+            </div>
+            <ul id="messages-list"></ul>
+
+            <div class="search-message">
+                <form id="search-message-form">
+                    <input type="text" id="search-message-id" placeholder="Rechercher un message par idMessage" required>
+                    <button type="submit" class="btn">Rechercher</button>
+                </form>
+                <div id="search-message-result"></div>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 - Présentation Node.js</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/js/api_express-script.js"></script>
+</body>
+</html>

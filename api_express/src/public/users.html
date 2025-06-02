@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestion des utilisateurs - API Express">
+    <meta name="author" content="Richard Bonnegent">
+    <meta name="keywords" content="Node.js, Express, API, MongoDB, Authentification">
+    <link rel="icon" href="/assets/img/nodejs-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style-api_express.css">
+    <title>API Express - Utilisateurs</title>
+</head>
+    <body>
+
+        <nav class="main-nav">
+            <div class="nav-content">
+                <a href="../../../index.html" class="logo-link">
+                    <img src="/assets/img/nodejs-logo.svg" alt="Node.js Logo" class="logo-img">
+                </a>
+                <div class="menu-burger">
+                    <img src="/assets/img/burger.png" alt="Menu" id="burger-menu">
+                </div>
+                <ul>
+                    <li><a href="index.html" class="active">API Express</a></li>
+                    <li><a href="../../../front_react/public/index.html">Front React</a></li>
+                    <li><a href="../../../la_foire_rest_api/">La Foire REST API</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="sub-nav">
+            <div class="sub-menu-burger">
+                <img src="/assets/img/burger.png" alt="Menu" id="sub-burger-menu">
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil API</a></li>
+                <li><a href="users.html" class="active">Liste utilisateurs</a></li>
+                <li><a href="messages.html">Messages</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="projects-list">
+                <div class="header-actions">
+                    <h1>Liste des utilisateurs</h1>
+                    <div class="actions" id="actions">
+                        <button class="btn open-modal" data-modal="signup">Inscription</button>
+                        <button class="btn open-modal" data-modal="signin">Connexion</button>
+                    </div>
+                    <div class="user-actions" id="user-actions">
+                        <button class="btn" id="logout-btn">Déconnexion</button>
+                        <button class="btn" id="update-account-btn">Modifier</button>
+                        <button class="btn" id="delete-account-btn">Supprimer</button>
+                    </div>
+                </div>
+                
+                <p>
+                    Cette page affiche la liste des utilisateurs enregistrés dans l'API Express.<br>
+                    Vous pouvez vous inscrire ou vous connecter pour accéder aux fonctionnalités de l'API.
+                </p>
+    
+                <!-- Modale réutilisable -->
+                <div id="modal-nodejs" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div id="modal-body"></div>
+                    </div>
+                </div>
+                <ul id="users-list"></ul>
+
+                <div class="search-user">
+                    <form id="search-user-form">
+                        <input type="text" id="search-id" placeholder="Rechercher un utilisateur par idUser" required>
+                        <button type="submit" class="btn">Rechercher</button>
+                    </form>
+                    <div id="search-result"></div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>© 2025 - Présentation Node.js</p>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="/js/api_express-script.js"></script>
+    </body>
+</html>

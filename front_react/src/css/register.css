@@ -1,0 +1,22 @@
+/* Si vous voulez personnaliser un peu plus, vous pouvez ajouter ces styles. */
+
+.register-container {
+    max-width: 600px;
+}
+
+.register-form h2 {
+    font-size: 24px;
+    color: #007bff;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accueil des projets Node.js de Richard Bonnegent">
+    <meta name="author" content="Richard Bonnegent">
+    <meta name="keywords" content="Node.js, Express, React, API, MongoDB, projets">
+    <link rel="icon" href="./assets/img/nodejs-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Accueil - Projets Node.js</title>
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="index.html" class="logo-link active">
+                <img src="./assets/img/nodejs-logo.svg" alt="Node.js Logo" class="logo-img">
+            </a>
+            <div class="menu-burger">
+                <img src="/assets/img/burger.png" alt="Menu" id="burger-menu">
+            </div>
+            <ul>
+                <li><a href="http://localhost:8000/index.html">API Express</a></li>
+                <li><a href="./front_react/public/index.html">Front React</a></li>
+                <li><a href="./la_foire_rest_api">La Foire REST API</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Projets Node.js</h1>
+        <p>Bienvenue sur la page d'accueil des projets Node.js de Richard Bonnegent</p>
+    </header>
+
+    <main>
+        <section class="projects-list">
+            <ul>
+                <li>
+                    <h3><a href="./api_express/src/public/index.html">API Express</a></h3>
+                    <p>
+                        <strong>API REST sécurisée</strong> avec Express, MongoDB et JWT.<br>
+                        Permet la gestion des utilisateurs et des messages.<br>
+                        <em>Idéal pour découvrir la création d’API modernes avec Node.js.</em>
+                    </p>
+                </li>
+                <li>
+                    <h3><a href="./front_react/public/index.html">Front React</a></h3>
+                    <p>
+                        <strong>Interface utilisateur en React</strong> pour consommer l’API.<br>
+                        Affichage dynamique des données, design moderne et responsive.<br>
+                        <em>Parfait pour apprendre à connecter un front React à une API Node.js.</em>
+                    </p>
+                </li>
+                <li>
+                    <h3><a href="./la_foire_rest_api">La Foire REST API</a></h3>
+                    <p>
+                        <strong>API complète</strong> pour la gestion d’articles, d’avis et d’utilisateurs.<br>
+                        Authentification, gestion avancée, architecture modulaire.<br>
+                        <em>Pour aller plus loin dans la conception d’API robustes.</em>
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 - Présentation Node.js</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

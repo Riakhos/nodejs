@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Présentation du projet API Express de Richard Bonnegent">
+    <meta name="author" content="Richard Bonnegent">
+    <meta name="keywords" content="Node.js, Express, API, MongoDB, Authentification">
+    <link rel="icon" href="/assets/img/nodejs-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style-api_express.css">
+    <title>API Express - Présentation</title>
+</head>
+    <body>
+
+        <nav class="main-nav">
+            <div class="nav-content">
+                <a href="../../../index.html" class="logo-link">
+                    <img src="/assets/img/nodejs-logo.svg" alt="Node.js Logo" class="logo-img">
+                </a>
+                <div class="menu-burger">
+                    <img src="/assets/img/burger.png" alt="Menu" id="burger-menu">
+                </div>
+                <ul>
+                    <li><a href="index.html" class="active">API Express</a></li>
+                    <li><a href="../../../front_react/public/index.html">Front React</a></li>
+                    <li><a href="../../../la_foire_rest_api/">La Foire REST API</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="sub-nav">
+            <div class="sub-menu-burger">
+                <img src="/assets/img/burger.png" alt="Menu" id="sub-burger-menu">
+            </div>
+            <ul>
+                <li><a href="index.html" class="active">Accueil API</a></li>
+                <li><a href="users.html">Liste utilisateurs</a></li>
+                <li><a href="messages.html">Messages</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="projects-list">
+                <h1>API Express</h1>
+                <p>
+                    Cette API Express permet de gérer des <strong>utilisateurs</strong> et des <strong>messages</strong> avec Node.js, Express et MongoDB.<br>
+                    <strong>Fonctionnalités :</strong>
+                    <ul>
+                        <li>Authentification sécurisée (JWT)</li>
+                        <li>Gestion des utilisateurs (CRUD)</li>
+                        <li>Gestion des messages (CRUD)</li>
+                        <li>Recherche de messages par utilisateur ou par identifiant</li>
+                        <li>Interface HTML pour tester toutes les fonctionnalités</li>
+                    </ul>
+                    <em>Démarrez le serveur puis utilisez l'interface web ou un outil comme Postman pour tester les endpoints.</em>
+                </p>
+                <h2>Comment démarrer ?</h2>
+                <ul>
+                    <li>Installer les dépendances : <code>npm install</code></li>
+                    <li>Lancer le serveur : <code>npm start</code></li>
+                    <li>Accéder à l'interface sur <a href="http://localhost:8000" target="_blank" rel="noopener">localhost:8000</a></li>
+                </ul>
+                <h2>Exemples d'endpoints</h2>
+                <ul>
+                    <li><code>POST /api/user/add</code> : Inscription d'un utilisateur</li>
+                    <li><code>POST /api/user/login</code> : Connexion d'un utilisateur</li>
+                    <li><code>GET /api/user/all</code> : Liste des utilisateurs</li>
+                    <li><code>POST /api/message/add</code> : Ajouter un message</li>
+                    <li><code>GET /api/message/all</code> : Liste des messages</li>
+                    <li><code>PUT /api/message/update/:idMessage</code> : Modifier un message</li>
+                    <li><code>DELETE /api/message/delete/:idMessage</code> : Supprimer un message</li>
+                </ul>
+            </section>
+
+            
+            <!-- Modale réutilisable -->
+            <div id="modal-nodejs" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div id="modal-body"></div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>© 2025 - Présentation Node.js</p>
+        </footer>
+        
+        <script src="/js/api_express-script.js"></script>
+    </body>
+</html>
