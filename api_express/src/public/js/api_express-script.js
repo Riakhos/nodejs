@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // AFFICHAGE DES UTILISATEURS (uniquement sur users.html)
     // ===========================
     if (document.getElementById('users-list')) {
-        fetch('https://richard.bonnegent.fr/nodejs/api/user/all')
+        fetch('/nodejs/api/user/all')
             .then(res => res.json())
             .then(data => {
                 const users = Array.isArray(data.data) ? data.data : [];
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (signupForm) {
                 signupForm.onsubmit = function(e) {
                     e.preventDefault();
-                    fetch('https://richard.bonnegent.fr/nodejs/api/user/add', {
+                    fetch('/nodejs/api/user/add', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (signinForm) {
                 signinForm.onsubmit = function(e) {
                     e.preventDefault();
-                    fetch('https://richard.bonnegent.fr/nodejs/api/user/login', {
+                    fetch('/nodejs/api/user/login', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // AFFICHAGE DES MESSAGES (uniquement sur messages.html)
     // ===========================
     if (document.getElementById('messages-list')) {
-        fetch('https://richard.bonnegent.fr/nodejs/api/message/all?page=1&limit=10')
+        fetch('/nodejs/api/message/all?page=1&limit=10')
             .then(res => res.json())
             .then(data => {
                 const messages = Array.isArray(data.data) ? data.data : [];
@@ -432,7 +432,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         e.preventDefault();
                         const user = this.user.value.trim();
                         const content = this.content.value.trim();
-                        const res = await fetch('https://richard.bonnegent.fr/nodejs/api/message/add', {
+                        const res = await fetch('/nodejs/api/message/add', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ user, content })
