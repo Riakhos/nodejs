@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('delete-account-btn')?.addEventListener('click', async () => {
         const user = JSON.parse(localStorage.getItem('user'));
         if (user && confirm("Voulez-vous vraiment supprimer votre compte ?")) {
-            const res = await fetch(`https://richard.bonnegent.fr/nodejs/api/user/delete/${user._id}`, { method: 'DELETE' });
+            const res = await fetch(`/nodejs/api/user/delete/${user._id}`, { method: 'DELETE' });
             const data = await res.json();
             alert(data.message);
             localStorage.removeItem('user');
@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (this.password.value) {
                         updateData.password = this.password.value;
                     }
-                    fetch(`https://richard.bonnegent.fr/nodejs/api/user/update/${user._id}`, {
+                    fetch(`/nodejs/api/user/update/${user._id}`, {
                         method: 'PUT',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(updateData)
@@ -297,7 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const id = document.getElementById('search-id').value.trim();
         const resultDiv = document.getElementById('search-result');
         if (id) {
-            const res = await fetch(`https://richard.bonnegent.fr/nodejs/api/user/find/${id}`);
+            const res = await fetch(`/nodejs/api/user/find/${id}`);
             const data = await res.json();
             if (data.data) {
                 resultDiv.innerHTML = `<strong>Nom :</strong> ${data.data.lastname}<br>
@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             const idUser = document.getElementById('search-user-id').value.trim();
             if (idUser) {
-                const res = await fetch(`https://richard.bonnegent.fr/nodejs/api/message/all/message/${idUser}`);
+                const res = await fetch(`/nodejs/api/message/all/message/${idUser}`);
                 const data = await res.json();
                 let html = `<h2>Messages de l'utilisateur</h2>`;
                 if (data.data && Array.isArray(data.data) && data.data.length > 0) {
@@ -386,7 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const id = document.getElementById('search-message-id').value.trim();
             const resultDiv = document.getElementById('search-message-result');
             if (id) {
-                const res = await fetch(`https://richard.bonnegent.fr/nodejs/api/message/find/${id}`);
+                const res = await fetch(`/nodejs/api/message/find/${id}`);
                 const data = await res.json();
                 if (data.data) {
                     resultDiv.innerHTML = `
@@ -472,7 +472,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const newContent = this.content.value.trim();
                     // Nécessite que l'utilisateur soit authentifié (token JWT envoyé automatiquement si tu utilises fetch avec credentials)
                     const token = localStorage.getItem('token');
-                    const res = await fetch(`https://richard.bonnegent.fr/nodejs/api/message/update/${idMessage}`, {
+                    const res = await fetch(`/nodejs/api/message/update/${idMessage}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json',
@@ -496,7 +496,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const idMessage = e.target.dataset.idmessage;
             if (confirm("Voulez-vous vraiment supprimer ce message ?")) {
                 const token = localStorage.getItem('token');
-                const res = await fetch(`https://richard.bonnegent.fr/nodejs/api/message/delete/${idMessage}`, {
+                const res = await fetch(`/nodejs/api/message/delete/${idMessage}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
