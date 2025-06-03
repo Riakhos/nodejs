@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Affichage des utilisateurs au chargement
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('http://localhost:8000/api/user/all')
+    fetch('https://richard.bonnegent.fr/nodejs/api/user/all')
         .then(res => res.json())
         .then(users => {
             const ul = document.getElementById('users-list');
