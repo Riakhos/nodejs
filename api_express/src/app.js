@@ -1,10 +1,17 @@
 import express from "express";
+import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
 import user from "./router/user/index.js";
 import message from "./router/message/index.js";
 
 const app = express();
+
+//* Autorise uniquement ton frontend GitHub Pages
+app.use(cors({
+    origin: "https://riakhos.github.io"
+}));
+
 //* Middleware pour analyser les corps de requêtes JSON
 app.use(express.json());
 
