@@ -17,7 +17,7 @@ const Article = () => {
         const fetchArticleById = async () => {
             try {
                 const { data } = await axios.get(
-                    `http://localhost:8000/api/article/get/${id}`
+                    `https://richard.bonnegent.fr/react/api/article/get/${id}`
                 )
 				setArticle(data.data)
 
@@ -40,7 +40,7 @@ const Article = () => {
         try {
 
             // Suppression via API
-            await axios.delete(`http://localhost:8000/api/article/delete/${id}`)
+            await axios.delete(`https://richard.bonnegent.fr/react/api/article/delete/${id}`)
             setMessage('Article supprimé avec succès!')
 
 			// Redirection après suppression

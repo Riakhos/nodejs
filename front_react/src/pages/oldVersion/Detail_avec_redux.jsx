@@ -29,7 +29,7 @@ const Article = memo(() => {
             // Récupère l'article par son id
             const fetchArticleById = async () => {
                 try {
-                    const { data } = await axios.get(`http://localhost:8000/api/article/get/${id}`)
+                    const { data } = await axios.get(`https://richard.bonnegent.fr/react/api/article/get/${id}`)
 
                     // Dispatch de l'action d'affichage
                     dispatch(ACTIONS.FETCH_ARTICLE_DETAIL_SUCCESS(data.data))
@@ -54,7 +54,7 @@ const Article = memo(() => {
         try {
 
             // Suppression via API
-            await axios.delete(`http://localhost:8000/api/article/delete/${id}`)
+            await axios.delete(`https://richard.bonnegent.fr/react/api/article/delete/${id}`)
 
             // Dispatch de l'action de suppression
             dispatch(ACTIONS.DELETE_ARTICLE_DETAIL(id))
