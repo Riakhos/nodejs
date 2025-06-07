@@ -189,6 +189,38 @@ nav.main-nav ul li a:focus {
 }
 
 /* ===========================
+   APERCU DEMO REACTJS (image + lien horizontal)
+   =========================== */
+.demo-apercu-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+}
+.demo-apercu-row img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0002;
+}
+.demo-apercu-row a {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #3c873a;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+.demo-apercu-row a:hover,
+.demo-apercu-row a:focus {
+    color: #222;
+    background: #3c873a;
+    border-radius: 6px;
+    text-decoration: underline;
+    outline: none;
+}
+
+/* ===========================
    BOUTONS
    =========================== */
 .btn {
