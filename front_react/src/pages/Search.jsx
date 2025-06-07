@@ -29,7 +29,7 @@ const SearchForm = () => {
 		// Affiche l'état de chargement
 		setLoading(true)
 		try {
-			const { data } = await axios.get("https://richard.bonnegent.fr/react/api/article/search", { params: filters })
+			const { data } = await axios.get("https://richard.bonnegent.fr/nodejs/api/article/search", { params: filters })
 
 			// Met à jour les résultats
 			setArticles(data.data)

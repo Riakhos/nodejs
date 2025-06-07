@@ -24,7 +24,7 @@ const UpdateArticle = () => {
 	useEffect(() => {
 		const fetchArticleById = async () => {
 			try {
-				const { data } = await axios.get(`https://richard.bonnegent.fr/react/api/article/update/${id}`)
+				const { data } = await axios.get(`https://richard.bonnegent.fr/nodejs/api/article/update/${id}`)
 				setArticle(data.data)
 			} catch (error) {
 				// Si une erreur survient, on l'affiche dans la console
@@ -80,7 +80,7 @@ const UpdateArticle = () => {
 
 		// Envoi de la requête PUT à l'API avec l'ID spécifié
 		try {
-			const response = await axios.put(`https://richard.bonnegent.fr/react/api/article/update/${id}`, formPayload, {
+			const response = await axios.put(`https://richard.bonnegent.fr/nodejs/api/article/update/${id}`, formPayload, {
 
 				// Définir l'en-tête
 				headers: { 'Content-Type': 'multipart/form-data' }

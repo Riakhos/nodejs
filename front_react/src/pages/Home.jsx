@@ -28,7 +28,7 @@ const Home = () => {
             try {
 
                 // Récupère les articles
-                const { data } = await axios.get('https://richard.bonnegent.fr/react/api/article/all')
+                const { data } = await axios.get('https://richard.bonnegent.fr/nodejs/api/article/all')
 
                 // Dispatch de l'action d'affichage
                 dispatch(ACTIONS.FETCH_ARTICLE_SUCCESS(data.data))

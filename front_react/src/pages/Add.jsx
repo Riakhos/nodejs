@@ -72,7 +72,7 @@ const AddArticle = () => {
         if (!validateForm()) return
         
         try {
-            const { data } = await axios.post('https://richard.bonnegent.fr/react/api/article/add', article)
+            const { data } = await axios.post('https://richard.bonnegent.fr/nodejs/api/article/add', article)
             console.log(data.data)
             // Récupérer l'ID de l'article créé
             const newArticleId = data.data._id

@@ -43,7 +43,7 @@ const AddArticle = () => {
         })
 
         try {
-            await axios.post('https://richard.bonnegent.fr/react/api/article/add', formPayload, {
+            await axios.post('https://richard.bonnegent.fr/nodejs/api/article/add', formPayload, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             })
             setMessage({ text: 'Article ajouté avec succès!', type: 'success' })

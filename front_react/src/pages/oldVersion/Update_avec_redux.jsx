@@ -44,7 +44,7 @@ const UpdateArticle = () => {
 			// Récupère l'article par son id
 			const fetchArticleById = async () => {
 				try {
-					const { data } = await axios.get(`https://richard.bonnegent.fr/react/api/article/update/${id}`)
+					const { data } = await axios.get(`https://richard.bonnegent.fr/nodejs/api/article/update/${id}`)
 
 					// Dispatch de l'action d'affichage
 					dispatch(ACTIONS.FETCH_ARTICLE_DETAIL_SUCCESS(data.data))
@@ -128,7 +128,7 @@ const UpdateArticle = () => {
 		// Envoi de la requête PUT à l'API avec l'ID spécifié
 		try {
 			
-			await axios.put(`https://richard.bonnegent.fr/react/api/article/update/${id}`, formPayload, {
+			await axios.put(`https://richard.bonnegent.fr/nodejs/api/article/update/${id}`, formPayload, {
 
 				// Définir l'en-tête
 				headers: { 'Content-Type': 'multipart/form-data' }
